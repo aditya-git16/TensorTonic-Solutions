@@ -11,7 +11,9 @@ def cosine_similarity(a, b):
     b_norm = np.linalg.norm(b)
     if a_norm==0 or b_norm==0 :
         return 0.000000
-    else :
+    elif a_norm == 1 and b_norm == 1 :
+        return dot_product
+    else : 
         result = dot_product / (a_norm*b_norm)
         return result
     pass
